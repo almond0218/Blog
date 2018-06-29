@@ -109,15 +109,11 @@ li a:hover {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 767px) {
   .logo {
-    margin-left: 2rem;
+    margin-left: 3rem;
     font-size: 1.3rem;
   }
 
-  li {
-    margin-right: 1.5rem;
-  }
-
-  .search {
+  ul {
     display: none;
   }
 }

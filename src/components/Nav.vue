@@ -4,8 +4,8 @@
       <router-link to="/" class="logo">블로그</router-link>
       <ul>
         <li><input type="text" class="search" v-model.trim="keyword"></li>
-        <li><router-link to="/" v-bind:class="{ active: active == 'post' }">포스트</router-link></li>
-        <li><router-link to="/profile" v-bind:class="{ active: active == 'profile' }">프로필</router-link></li>
+        <!-- <li><router-link to="/" v-bind:class="{ active: active == 'post' }">포스트</router-link></li>
+        <li><router-link to="/profile" v-bind:class="{ active: active == 'profile' }">프로필</router-link></li> -->
       </ul>
     </nav>
   </div>

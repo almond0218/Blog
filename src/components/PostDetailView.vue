@@ -5,7 +5,7 @@
       <div class="post-field">
         <span class="title">{{ postTitle }}</span>
         <span class="date">{{ postDate }}</span>
-        <p class="post-content">{{ postContent }}</p>
+        <p class="post-content" v-html="postContent"></p>
       </div>
     </div>
   </div>
@@ -15,6 +15,7 @@
 import Nav from '@/components/Nav'
 import axios from 'axios'
 import { mapState } from 'vuex'
+import marked from 'marked'
 
 export default {
   name: 'PostDetailView',
@@ -43,7 +44,7 @@ export default {
           const day = date[2]
           this.postTitle = response.data.title
           this.postDate = `${year}년 ${month}월 ${day}일`
-          this.postContent = response.data.content
+          this.postContent = marked(response.data.content)
         })
     }
   },

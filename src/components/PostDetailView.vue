@@ -44,7 +44,7 @@ export default {
           const day = date[2]
           this.postTitle = response.data.title
           this.postDate = `${year}년 ${month}월 ${day}일`
-          this.postContent = marked(response.data.content)
+          this.postContent = marked(response.data.content).replace(/<pre>/gi, `<pre style="overflow-wrap: break-word; white-space: pre-wrap;">`)
         })
     }
   },
@@ -102,11 +102,8 @@ export default {
 
 .post-content {
   color: #34495e;
-
   width: 100%;
-
   font-size: 1.2rem;
-
   margin-top: 7rem;
 }
 </style>

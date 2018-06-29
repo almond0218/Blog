@@ -26,7 +26,7 @@ const store = new Vuex.Store({
       axios.get(context.state.apiUrl + '/posts/')
         .then((response) => {
           context.commit('replacePosts', {
-            posts: response.data.reverse()
+            posts: response.data
           })
         })
     },
@@ -34,7 +34,7 @@ const store = new Vuex.Store({
       axios.get(`${context.state.apiUrl}/posts/search/title/?keyword=${payload.keyword}`)
         .then((response) => {
           context.commit('replacePosts', {
-            posts: response.data.reverse()
+            posts: response.data
           })
         })
     },
@@ -42,7 +42,7 @@ const store = new Vuex.Store({
       axios.get(`${context.state.apiUrl}/posts/search/tag/?keyword=${payload.keyword.split('#')[1]}`)
         .then((response) => {
           context.commit('replacePosts', {
-            posts: response.data.reverse()
+            posts: response.data
           })
         })
     }

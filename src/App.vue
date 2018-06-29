@@ -13,7 +13,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    apiUrl: 'https://gwvb3guzwj.execute-api.ap-northeast-2.amazonaws.com/dev/post-api',
+    apiUrl: 'https://eet6zg9gk8.execute-api.ap-northeast-2.amazonaws.com/production/post-api',
     posts: []
   },
   mutations: {

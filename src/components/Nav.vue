@@ -121,7 +121,7 @@ li a:hover {
 /* iPads (portrait) ----------- */
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
   .logo {
-    margin-left: 2rem;
+    margin-left: 6rem;
     font-size: 1.3rem;
   }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="post-detail-view">
-    <Nav active="post"></Nav>
+    <Nav></Nav>
     <div class="content">
       <div class="post-field">
         <span class="title">{{ postTitle }}</span>
@@ -71,9 +71,9 @@ export default {
 
 .post-field {
   width: 65%;
-  height: 100%;
 
   padding-top: 60px;
+  padding-bottom: 60px;
 
   display: flex;
   flex-direction: column;

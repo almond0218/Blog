@@ -4,8 +4,6 @@
       <router-link to="/" class="logo">블로그</router-link>
       <ul>
         <li><input type="text" class="search" v-model.trim="keyword"></li>
-        <!-- <li><router-link to="/" v-bind:class="{ active: active == 'post' }">포스트</router-link></li>
-        <li><router-link to="/profile" v-bind:class="{ active: active == 'profile' }">프로필</router-link></li> -->
       </ul>
     </nav>
   </div>
@@ -17,12 +15,6 @@ import _ from 'lodash'
 
 export default {
   name: 'Nav',
-  props: {
-    active: {
-      type: String,
-      default: 'post'
-    }
-  },
   data: function () {
     return {
       keyword: ''
@@ -111,10 +103,6 @@ li a {
 }
 
 li a:hover {
-  color: #2c3e50;
-}
-
-.active {
   color: #2c3e50;
 }
 

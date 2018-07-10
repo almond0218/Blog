@@ -58,7 +58,6 @@ export default {
 }
 
 .title {
-  font-size: 2rem;
   font-weight: 500;
 
   margin-top: 1.5rem;
@@ -68,7 +67,6 @@ export default {
 
 .date {
   color: #81878b;
-  font-size: 1.2rem;
 
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -84,5 +82,38 @@ export default {
   display: inline-block;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 767px) {
+  .title {
+      font-size: 1.5rem;
+  }
+
+  .date {
+    font-size: 0.8rem;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  .title {
+      font-size: 2rem;
+  }
+
+  .date {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1025px) {
+  .title {
+      font-size: 2rem;
+  }
+
+  .date {
+    font-size: 1.2rem;
+  }
 }
 </style>

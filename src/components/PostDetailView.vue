@@ -70,8 +70,6 @@ export default {
 }
 
 .post-field {
-  width: 65%;
-
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -83,18 +81,13 @@ export default {
 
 .title {
   color: #2c3e50;
-
-  font-size: 2.8rem;
   font-weight: 700;
-
   margin-top: 60px;
-
   text-align: center;
 }
 
 .date {
   color: #81878b;
-  font-size: 1.2rem;
 
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -104,6 +97,67 @@ export default {
   color: #34495e;
   width: 100%;
   font-size: 1.2rem;
-  margin-top: 7rem;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 767px) {
+  .post-field {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .date {
+
+    font-size: 1.0rem;
+  }
+
+  .post-content {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  .post-field {
+    width: 65%;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .date {
+    font-size: 1.2rem;
+  }
+
+  .post-content {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1025px) {
+    .post-field {
+      width: 65%;
+    }
+
+    .title {
+      font-size: 2.8rem;
+    }
+
+    .date {
+
+      font-size: 1.2rem;
+    }
+
+    .post-content {
+      margin-top: 7rem;
+      font-size: 1.2rem;
+    }
 }
 </style>

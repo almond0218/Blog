@@ -53,7 +53,7 @@ export default {
 .post-field {
   max-width: 700px;
   min-width: 200px;
-  width: 70%;
+  width: 80%;
   height: 100%;
 
   display: flex;

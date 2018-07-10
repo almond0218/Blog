@@ -30,4 +30,37 @@ export default {
 
   color: #2c3e50;
 }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 767px) {
+  .name {
+    font-size: 0.5rem;
+  }
+
+  .tag {
+    padding: 0.3rem;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  .name {
+    font-size: 0.8rem;
+  }
+
+  .tag {
+    padding: 0.4rem;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1025px) {
+  .name {
+    font-size: 0.8rem;
+  }
+
+  .tag {
+    padding: 0.4rem;
+  }
+}
 </style>

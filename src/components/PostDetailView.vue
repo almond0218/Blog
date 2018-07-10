@@ -151,12 +151,11 @@ export default {
     }
 
     .date {
-
       font-size: 1.2rem;
     }
 
     .post-content {
-      margin-top: 7rem;
+      margin-top: 3rem;
       font-size: 1.2rem;
     }
 }

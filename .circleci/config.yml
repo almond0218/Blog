@@ -38,4 +38,7 @@ jobs:
 
       - deploy:
           name: Deploy to s3
-          command: aws s3 sync ./dist/ s3://blog.a1m0nd.kr/ --delete
+          command: |
+              if [ ${CIRCLE_BRANCH=="master"} ]; then
+                  aws s3 sync ./dist/ s3://blog.a1m0nd.kr/ --delete
+              fi

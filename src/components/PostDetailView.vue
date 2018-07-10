@@ -123,7 +123,7 @@ export default {
 /* iPads (portrait) ----------- */
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
   .post-field {
-    width: 65%;
+    width: 75%;
   }
 
   .title {

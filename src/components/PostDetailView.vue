@@ -14,8 +14,9 @@
 <script>
 import Nav from '@/components/Nav'
 import axios from 'axios'
-import hljs from 'highlight.js/lib/core'
 import { mapState } from 'vuex'
+import hljs from 'highlight.js/lib/core'
+import 'highlight.js/styles/atom-one-light.css'
 
 export default {
   name: 'PostDetailView',

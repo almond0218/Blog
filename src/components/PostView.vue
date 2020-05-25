@@ -3,7 +3,7 @@
     <Nav></Nav>
     <div class="content">
       <div class="post-field">
-        <Post v-for="post in posts" :key="post.id" :post-title="post.title" :post-date="post.created_at" :post-id="post.id" :tags="post.tags"></Post>
+        <Post v-for="post in posts" :key="post.id" :post-title="post.title" :post-date="post.createdAt" :post-id="post.id"></Post>
       </div>
     </div>
   </div>

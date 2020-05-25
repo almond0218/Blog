@@ -13,7 +13,7 @@ export default new Router({
       component: PostView
     },
     {
-      path: '/post/:postId',
+      path: '/posts/:postId',
       name: 'PostDetailView',
       component: PostDetailView
     }

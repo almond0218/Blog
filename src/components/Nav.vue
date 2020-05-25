@@ -27,20 +27,13 @@ export default {
   },
   methods: {
     ...mapActions([
-      'getPostsByTitle',
-      'getPostsByTag'
+      'getPostsByTitle'
     ]),
     search: _.debounce(
       function () {
-        if (this.keyword.startsWith('#')) {
-          this.getPostsByTag({
-            keyword: this.keyword
-          })
-        } else {
-          this.getPostsByTitle({
-            keyword: this.keyword
-          })
-        }
+        this.getPostsByTitle({
+          keyword: this.keyword
+        })
       },
       500
     )

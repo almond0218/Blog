@@ -13,7 +13,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    apiUrl: 'https://eet6zg9gk8.execute-api.ap-northeast-2.amazonaws.com/production/post-api',
+    apiUrl: 'https://uf1k81q71i.execute-api.ap-northeast-2.amazonaws.com/prod/api/blog',
     posts: []
   },
   mutations: {
@@ -31,15 +31,7 @@ const store = new Vuex.Store({
         })
     },
     getPostsByTitle (context, payload) {
-      axios.get(`${context.state.apiUrl}/posts/search/title/?keyword=${payload.keyword}`)
-        .then((response) => {
-          context.commit('replacePosts', {
-            posts: response.data
-          })
-        })
-    },
-    getPostsByTag (context, payload) {
-      axios.get(`${context.state.apiUrl}/posts/search/tag/?keyword=${payload.keyword.split('#')[1]}`)
+      axios.get(`${context.state.apiUrl}/posts/?search=${payload.keyword}`)
         .then((response) => {
           context.commit('replacePosts', {
             posts: response.data

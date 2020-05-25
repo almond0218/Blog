@@ -1,21 +1,13 @@
 <template>
   <div class="post">
     <span class="title"><router-link :to="{ name: 'PostDetailView', params: { postId: postId } }">{{ postTitle }}</router-link></span>
-    <div class="tag-field">
-      <Tag class="tag" v-for="tag in tags" :tag-name="tag.name" :key="tag.id"></Tag>
-    </div>
     <span class="date">{{ parsedDate }}</span>
   </div>
 </template>
 
 <script>
-import Tag from '@/components/Tag'
-
 export default {
   name: 'Post',
-  components: {
-    Tag
-  },
   props: {
     postTitle: {
       required: true,
@@ -28,10 +20,6 @@ export default {
     postDate: {
       required: true,
       type: String
-    },
-    tags: {
-      required: true,
-      type: Array
     }
   },
   computed: {
@@ -76,12 +64,6 @@ export default {
 .title a {
   text-decoration: none;
   color: #2c3e50
-}
-
-.tag {
-  display: inline-block;
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
 }
 
 /* Smartphones (portrait) ----------- */

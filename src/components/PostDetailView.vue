@@ -5,7 +5,7 @@
       <div class="post-field">
         <span class="title">{{ postTitle }}</span>
         <span class="date">{{ postDate }}</span>
-        <p class="post-content" v-html="postContent"></p>
+        <div class="post-content markdown-body" v-html="postContent"></div>
       </div>
     </div>
   </div>
@@ -14,8 +14,8 @@
 <script>
 import Nav from '@/components/Nav'
 import axios from 'axios'
+import hljs from 'highlight.js/lib/core'
 import { mapState } from 'vuex'
-import marked from 'marked'
 
 export default {
   name: 'PostDetailView',
@@ -36,15 +36,25 @@ export default {
   },
   methods: {
     getPostById: function () {
-      axios.get(`${this.apiUrl}/post/${this.$route.params.postId}/`)
+      axios.get(`${this.apiUrl}/posts/${this.$route.params.postId}/`)
         .then((response) => {
-          const date = response.data.created_at.split('T')[0].split('-')
+          const markdown = require('markdown-it')({
+            highlight: function (str, lang) {
+              if (lang && hljs.getLanguage(lang)) {
+                try {
+                  return hljs.highlight(lang, str).value
+                } catch (__) {}
+              }
+              return ''
+            }
+          })
+          const date = response.data.createdAt.split('T')[0].split('-')
           const year = date[0]
           const month = date[1]
           const day = date[2]
           this.postTitle = response.data.title
           this.postDate = `${year}년 ${month}월 ${day}일`
-          this.postContent = marked(response.data.content).replace(/<pre>/gi, `<pre style="overflow-wrap: break-word; white-space: pre-wrap; background-color: #f5f7f9; padding: 15px;">`)
+          this.postContent = markdown.render(response.data.content)
         })
     }
   },

@@ -107,7 +107,7 @@ export default {
 .post-content {
   color: #34495e;
   width: 100%;
-  font-size: 1.2rem;
+  line-height: 29px;
 }
 
 /* Smartphones (portrait) ----------- */
@@ -117,17 +117,16 @@ export default {
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 28px;
   }
 
   .date {
-
-    font-size: 1.0rem;
+    font-size: 14px;
   }
 
   .post-content {
     margin-top: 2rem;
-    font-size: 0.8rem;
+    font-size: 14px;
   }
 }
 
@@ -138,16 +137,16 @@ export default {
   }
 
   .title {
-    font-size: 2.8rem;
+    font-size: 32px;
   }
 
   .date {
-    font-size: 1.2rem;
+    font-size: 16px;
   }
 
   .post-content {
     margin-top: 3rem;
-    font-size: 1.2rem;
+    font-size: 16px;
   }
 }
 
@@ -158,16 +157,16 @@ export default {
     }
 
     .title {
-      font-size: 2.8rem;
+      font-size: 42px;
     }
 
     .date {
-      font-size: 1.2rem;
+      font-size: 16px;
     }
 
     .post-content {
       margin-top: 3rem;
-      font-size: 1.2rem;
+      font-size: 16px;
     }
 }
 </style>
